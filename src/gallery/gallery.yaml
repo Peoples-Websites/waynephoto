@@ -109,7 +109,7 @@ images:
         - travel
         - street
     exif: {}
-  - path: travel/sanf
+  - path: travel/sanf.jpg
     meta:
       title: Somewhere in San Francisco
       description: I'm strangely drawn to abandoned places and things - somewhere in San Francisco.
@@ -125,7 +125,7 @@ images:
         - travel
         - street
     exif: {}
-  - path: travel/sanf-sanj-02
+  - path: travel/sanf-sanj-02.jpg
     meta:
       title: San Francisco / San Jose 2
       description: A day in San Francisco and San Jose.
@@ -173,7 +173,7 @@ images:
         - travel
         - street
     exif: {}
-  - path: travel/sanf-sanj-08
+  - path: travel/sanf-sanj-08.jpg
     meta:
       title: San Francisco / San Jose 8
       description: A day in San Francisco and San Jose.
@@ -181,7 +181,7 @@ images:
         - travel
         - street
     exif: {}
-  - path: travel/sanf-sanj-09
+  - path: travel/sanf-sanj-09.jpg
     meta:
       title: San Francisco / San Jose 9
       description: A day in San Francisco and San Jose.

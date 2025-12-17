@@ -22,3 +22,10 @@
 #photo-grid {
   column-gap: 2rem; /* spacing between columns */
 }
+
+.gclose, .gnext, .gprev {
+  display: block !important;
+  opacity: 1 !important;
+  z-index: 9999;
+  color: #fff;
+}
