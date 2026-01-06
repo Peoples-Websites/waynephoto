@@ -14,7 +14,6 @@
     "astro": "^5.16.4",
     "glightbox": "^3.3.1",
     "js-yaml": "^4.1.1",
-    "justified-layout": "^4.1.0",
     "lucide-astro": "^0.556.0",
     "preact": "^10.28.0",
     "tailwindcss": "^4.1.17"
