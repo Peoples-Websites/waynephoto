@@ -1,4 +1,3 @@
-import type { ImageMetadata } from 'astro';
 import path from 'path';
 import { promises as fs } from 'fs';
 import * as yaml from 'js-yaml';
@@ -68,33 +67,8 @@ export interface ImageExif {
 	lensModel?: string;
 }
 
-/**
- * Represents a processed image with metadata
- * @property {ImageMetadata} src - Image source metadata from Astro
- * @property {string} alt - Alt text for accessibility
- * @property {string} description - Detailed description of the image
- * @property {string[]} collections - Array of collection IDs the image belongs to
- */
-export interface Image {
-	src: ImageMetadata;
-	title: string;
-	description: string;
-	collections: string[];
-}
-
-/**
- * Type for the image module import result
- * @property {ImageMetadata} default - Default export containing image metadata
- */
-export type ImageModule = { default: ImageMetadata };
-
 export const loadGallery = async (galleryPath: string): Promise<GalleryData> => {
 	const yamlPath = path.resolve(process.cwd(), galleryPath);
 	const content = await fs.readFile(yamlPath, 'utf8');
 	return yaml.load(content) as GalleryData;
-};
-
-export const NullGalleryData: GalleryData = {
-	collections: [],
-	images: [],
 };

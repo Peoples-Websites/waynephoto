@@ -12,15 +12,26 @@
  * This is the single source of truth for "renderable images".
  */
 
+import type { ImageMetadata } from 'astro';
+
+export interface Image {
+  src: ImageMetadata;
+  title: string;
+  description: string;
+  collections: string[];
+}
+
+export type ImageModule = { default: ImageMetadata };
+
 import path from 'path';
+
 import {
-	type Collection,
-	type GalleryData,
-	type GalleryImage,
-	type Image,
-	type ImageModule,
-	loadGallery,
+  type Collection,
+  type GalleryData,
+  type GalleryImage,
+  loadGallery,
 } from './galleryData.ts';
+
 
 /**
  * Error class for image-related errors
