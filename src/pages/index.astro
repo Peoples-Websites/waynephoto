@@ -1,22 +1,37 @@
 ---
+/**
+ * Home page (/)
+ *
+ * This file composes the landing page using high-level sections.
+ * All logic here runs at build time; no client-side JS is executed
+ * unless individual components opt into hydration.
+ */
+
 import Layout from '../layouts/Layout.astro';
+
+// Hero section at the top of the page
 import LandingHero from '../components/LandingHero.astro';
+
+// Horizontally scrolling featured work (may use client-side JS internally)
 import FeaturedWorkScroll from '../components/FeaturedWorkScroll.astro';
+
+// Curated gallery preview (likely integrates with GLightbox)
 import FeaturedGallery from '../components/FeaturedGallery.astro';
 ---
 
 <Layout>
-
+  <!-- Hero / introduction -->
   <section>
     <LandingHero />
   </section>
 
+  <!-- Featured work scroll section -->
   <section>
     <FeaturedWorkScroll />
   </section>
 
+  <!-- Featured gallery preview -->
   <section>
     <FeaturedGallery />
   </section>
-
 </Layout>

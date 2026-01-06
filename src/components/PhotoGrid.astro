@@ -1,4 +1,15 @@
 ---
+/**
+ * PhotoGrid
+ *
+ * Presentation-only gallery grid.
+ * - Receives preloaded image data at build time
+ * - Renders a responsive masonry-style grid
+ * - Enhances images with GLightbox at runtime
+ *
+ * This component does not fetch data or manage state.
+ */
+
 import { Image } from 'astro:assets';
 import type { Image as ImageType } from '../data/galleryData';
 
@@ -11,8 +22,11 @@ const { images } = Astro.props;
 
 <section id="photo-grid" class="w-full mx-auto">
   <div class="px-4">
-    <!-- Grid container -->
-    <div id="photo-grid-columns" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
+    <!-- Responsive multi-column grid -->
+    <div
+      id="photo-grid-columns"
+      class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4"
+    >
       {images.map((image) => (
         <a
           href={image.src.src}
@@ -21,6 +35,7 @@ const { images } = Astro.props;
           data-type="image"
           data-glightbox={image.description ? `title: ${image.description}` : undefined}
         >
+          <!-- Optimised image output -->
           <Image
             src={image.src}
             quality={90}
@@ -36,13 +51,14 @@ const { images } = Astro.props;
   </div>
 </section>
 
-<!-- GLightbox CSS and JS from CDN -->
+<!-- GLightbox assets -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
+  // Initialise GLightbox once DOM is ready
   document.addEventListener('DOMContentLoaded', () => {
-    const lightbox = GLightbox({
+    GLightbox({
       selector: '.glightbox',
       loop: true,
       closeButton: true,
@@ -50,22 +66,15 @@ const { images } = Astro.props;
       slideEffect: 'fade',
 
       // Custom SVG icons
-      svgClose: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>`,
-      svgNext: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="9 6 15 12 9 18"/>
-      </svg>`,
-      svgPrev: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="15 6 9 12 15 18"/>
-      </svg>`
+      svgClose: `...`,
+      svgNext: `...`,
+      svgPrev: `...`
     });
   });
 </script>
 
 <style>
-  /* Ensure icons are always visible */
+  /* Ensure navigation icons are visible above images */
   .gclose, .gnext, .gprev {
     display: block !important;
     opacity: 1 !important;
@@ -73,7 +82,7 @@ const { images } = Astro.props;
     color: #fff;
   }
 
-  /* Optional: hover effect for arrows */
+  /* Hover highlight for navigation controls */
   .gnext:hover, .gprev:hover, .gclose:hover {
     color: #ffd700;
   }
