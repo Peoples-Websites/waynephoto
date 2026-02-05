@@ -3,293 +3,207 @@ collections:
 
   - id: nature
     name: Nature
+
   - id: travel
     name: Travel
+
   - id: street
     name: Street
 
 images:
 
-  - path: saltburn/saltb-01.jpg
+  - path: 2018_06_04_London/DSCF1672.jpg
     meta:
-      title: Saltburn 1
-      description: A few images from an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
-      collections:
-        - featured
-        - nature
-    exif: {}
-  - path: saltburn/saltb-02.jpg
-    meta:
-      title: Saltburn 2
-      description: A few images from an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
-      collections:
-        - nature
-    exif: {}
-  - path: saltburn/saltb-03.jpg
-    meta:
-      title: Saltburn 3
-      description: A few images from an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
-      collections:
-        - nature
-    exif: {}
-  - path: saltburn/saltb-04.jpg
-    meta:
-      title: Saltburn 4
-      description: A few images from an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
-      collections:
-        - nature
-    exif: {}
-  - path: saltburn/saltb-05.jpg
-    meta:
-      title: Saltburn 5
-      description: A few images from an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
-      collections:
-        - nature
-    exif: {}
-  - path: saltburn/saltb-06.jpg
-    meta:
-      title: Saltburn 6
-      description: A few images from an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
-      collections:
-        - nature
-    exif: {}
-
-  - path: redcar/redc-01.jpg
-    meta:
-      title: Redcar 1
-      description: Redcar
-      collections:
-        - featured
-        - street
-    exif: {}
-  - path: redcar/redc-02.jpg
-    meta:
-      title: Redcar 2
-      description: Redcar
-      collections:
-        - featured
-        - street
-    exif: {}
-  - path: redcar/redc-03.jpg
-    meta:
-      title: Redcar 3
-      description: Redcar
-      collections:
-        - street
-    exif: {}
-  - path: redcar/redc-04.jpg
-    meta:
-      title: Redcar 4
-      description: Redcar
-      collections:
-        - street
-    exif: {}
-  - path: redcar/redc-05.jpg
-    meta:
-      title: Redcar 5
-      description: Redcar
+      title: The Girl With the Red Umbrella
+      description: My favourite from a wet day in London a few years back.
       collections:
         - featured
         - street
     exif: {}
 
-  - path: travel/crete.jpg
+  - path: 2018_06_04_London/DSCF1687.jpg
+    meta:
+      title: 2018_06_04_London 02
+      description: From a wet day in London a few years back.
+      collections:
+        - street
+    exif: {}
+
+  - path: 2019_01_25/DSCF5370.jpg
+    meta:
+      title: 2019_01_25 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2019_02_19/DSCF6662.jpg
+    meta:
+      title: 2019_02_19 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2022_04_03_Saltburn/DSCF1713.jpg
+    meta:
+      title: Low Tide in Saltburn 1
+      description: From an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
+      collections:
+        - nature
+    exif: {}
+
+  - path: 2022_04_03_Saltburn/DSCF1716.jpg
+    meta:
+      title: Low Tide in Saltburn 2
+      description: From an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
+      collections:
+        - featured
+        - nature
+    exif: {}
+
+  - path: 2022_04_03_Saltburn/DSCF1784.jpg
+    meta:
+      title: Low Tide in Saltburn 3
+      description: From an early morning walk at low tide in Saltburn. In the right conditions, this place really is otherworldly.
+      collections:
+        - nature
+    exif: {}
+
+  - path: 2022_06_27/DSCF2738.jpg
+    meta:
+      title: 2022_06_27 1
+      description:
+      collections:
+        - featured
+        - travel
+    exif: {}
+
+  - path: 2023_05_22_San_Francisco_San_Jose/DSCF3634.jpg
+    meta:
+      title: 2022_06_27_San_Francisco_San_Jose 1
+      description: A day in San Francisco and San Jose.
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2023_05_22_San_Francisco_San_Jose/DSCF3635.jpg
+    meta:
+      title: 2022_06_27_San_Francisco_San_Jose 2
+      description: A day in San Francisco and San Jose.
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2023_05_27/DSCF3822.jpg
+    meta:
+      title: 2023_05_27 1
+      description: I don't usually do black and white, but sometimes scenes just lend themselves to it.
+      collections:
+        - travel
+        - nature
+    exif: {}
+
+  - path: 2023_06_02_San_Francisco_San_Jose/DSCF4006.jpg
+    meta:
+      title: 2023_06_02_San_Francisco_San_Jose 1
+      description:
+      collections:
+        - featured
+        - travel
+        - street
+    exif: {}
+
+  - path: 2023_06_02_San_Francisco_San_Jose/DSCF4064.jpg
+    meta:
+      title: 2023_06_02_San_Francisco_San_Jose 2
+      description:
+      collections:
+        - travel
+        - street
+    exif: {}
+
+  - path: 2024_07_02/DSCF6974.jpg
+    meta:
+      title: 2024_07_02 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2024_07_08/DSCF7057.jpg
+    meta:
+      title: 2024_07_08_San_Francisco 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2024_09_10/DSCF6942.jpg
+    meta:
+      title: 2024_09_10 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2025_01_09/DSCF8537.jpg
+    meta:
+      title: 2025_01_09 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2025_02_25/DSCF8755.jpg
+    meta:
+      title: 2025_02_25 1
+      description:
+      collections:
+        - travel
+    exif: {}
+
+  - path: 2025_05_10/DSCF8150.jpg
+    meta:
+      title: 2025_05_10 1
+      description:
+      collections:
+        - travel
+        - street
+    exif: {}
+
+  - path: 2025_05_10/DSCF8158.jpg
+    meta:
+      title: 2025_05_10 2
+      description:
+      collections:
+        - travel
+        - street
+    exif: {}
+
+  - path: 2025_05_10/DSCF8164.jpg
+    meta:
+      title: 2025_05_10 3
+      description:
+      collections:
+        - travel
+        - street
+    exif: {}
+
+  - path: 2025_05_10/DSCF8172.jpg
+    meta:
+      title: 2025_05_10 4
+      description:
+      collections:
+        - travel
+        - street
+    exif: {}
+
+  - path: 2025_07_01_Crete/DSCF8172.jpg
     meta:
       title: An Old Club in the South of Crete
       description: I'm strangely drawn to abandoned places and things - an old club in the south of Crete.
       collections:
         - travel
-    exif: {}
-  - path: travel/red-umbr.jpg
-    meta:
-      title: The Girl with the Red Umbrella
-      description: My favourite from a wet day in London a few years back.
-      collections:
-        - featured
-        - travel
         - street
-    exif: {}
-  - path: travel/sanf.jpg
-    meta:
-      title: Somewhere in San Francisco
-      description: I'm strangely drawn to abandoned places and things - somewhere in San Francisco.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-01.jpg
-    meta:
-      title: San Francisco / San Jose 1
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-02.jpg
-    meta:
-      title: San Francisco / San Jose 2
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-03.jpg
-    meta:
-      title: San Francisco / San Jose 3
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-04.jpg
-    meta:
-      title: San Francisco / San Jose 4
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-05.jpg
-    meta:
-      title: San Francisco / San Jose 5
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-06.jpg
-    meta:
-      title: San Francisco / San Jose 6
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-07.jpg
-    meta:
-      title: San Francisco / San Jose 7
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-08.jpg
-    meta:
-      title: San Francisco / San Jose 8
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/sanf-sanj-09.jpg
-    meta:
-      title: San Francisco / San Jose 9
-      description: A day in San Francisco and San Jose.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/utah.jpg
-    meta:
-      title: Somewhere in Utah
-      description: I'm strangely drawn to abandoned places and things - somewhere in Utah.
-      collections:
-        - travel
-        - street
-    exif: {}
-  - path: travel/vegas-01.jpg
-    meta:
-      title: Las Vegas 1
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - travel
-    exif: {}
-  - path: travel/vegas-02.jpg
-    meta:
-      title: Las Vegas 2
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - travel
-    exif: {}
-  - path: travel/vegas-03.jpg
-    meta:
-      title: Las Vegas 3
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - travel
-    exif: {}
-  - path: travel/vegas-04.jpg
-    meta:
-      title: Las Vegas 4
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - travel
-    exif: {}
-  - path: travel/vegas-05.jpg
-    meta:
-      title: Las Vegas 5
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - travel
-    exif: {}
-  - path: travel/vegas-06.jpg
-    meta:
-      title: Las Vegas 6
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - featured
-        - travel
-        - street
-    exif: {}
-  - path: travel/vegas-07.jpg
-    meta:
-      title: Las Vegas 7
-      description: Viva Las Vegas ! As maximal and full on as Las Vegas is, It also makes for some interesting minimal shots, and aside from the gaudy casino hotels, the architecture is really quite striking as you walk down the strip away from the main casinos. Most of these were taken on an early morning walk before it became too hot to be outside.
-      collections:
-        - travel
-    exif: {}
-  - path: travel/zebra-man.jpg
-    meta:
-      title: Zebra Man
-      description: Here's another little favourite of mine from Hyderabad. I was taking a photo of the bus and people as we passed it in a taxi when this guy came zooming up between us...
-      collections:
-        - featured
-        - travel
-        - street
-    exif: {}
-
-  - path: bw/bw-01.jpg
-    meta:
-      title: BW 1
-      description: I don't usually do black and white, but sometimes scenes just lend themselves to it.
-      collections:
-        - travel
-    exif: {}
-  - path: bw/bw-02.jpg
-    meta:
-      title: BW 2
-      description: I don't usually do black and white, but sometimes scenes just lend themselves to it.
-      collections:
-        - travel
-    exif: {}
-  - path: bw/bw-03.jpg
-    meta:
-      title: BW 3
-      description: I don't usually do black and white, but sometimes scenes just lend themselves to it.
-      collections:
-        - travel
-    exif: {}
-  - path: bw/bw-04.jpg
-    meta:
-      title: BW 4
-      description: I don't usually do black and white, but sometimes scenes just lend themselves to it.
-      collections:
-        - travel
-    exif: {}
-  - path: bw/bw-05.jpg
-    meta:
-      title: BW 5
-      description: I don't usually do black and white, but sometimes scenes just lend themselves to it.
-      collections:
-        - travel
     exif: {}

@@ -1,8 +1,8 @@
 /**
  * galleryData.ts
  *
- * This module defines the structure of the gallery content and
- * provides a helper to load it from a YAML file.
+ * This module defines the structure of the gallery content
+ * and provides a helper to load it from a YAML file.
  *
  * Responsibilities:
  * - Define the schema for collections and images
