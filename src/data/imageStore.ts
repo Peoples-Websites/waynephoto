@@ -128,7 +128,7 @@ const loadGalleryData = async (galleryPath: string): Promise<GalleryData> => {
 
 function filterImagesByCollection(collection: string | undefined, images: GalleryImage[]) {
 	if (collection) {
-		images = images.filter((image) => image.meta.collections.includes(collection));
+		images = images.filter((image) => image.collections.includes(collection));
 	}
 	return images;
 }
@@ -136,7 +136,7 @@ function filterImagesByCollection(collection: string | undefined, images: Galler
 function validateGalleryData(gallery: GalleryData) {
 	const collectionIds = gallery.collections.map((col) => col.id).concat(builtInCollections);
 	for (const image of gallery.images) {
-		const invalidCollections = image.meta.collections.filter((col) => !collectionIds.includes(col));
+		const invalidCollections = image.collections.filter((col) => !collectionIds.includes(col));
 		if (invalidCollections.length > 0) {
 			throw new ImageStoreError(
 				`Invalid collection(s) [${invalidCollections.join(', ')}] referenced in image: ${image.path}`,
@@ -211,9 +211,9 @@ const createImageDataFor = (imagePath: string, img: GalleryImage): Image => {
 
 	return {
 		src: imageModule.default,
-		title: img.meta.title,
-		description: img.meta.description,
-		collections: img.meta.collections,
+		title: img.title,
+		description: img.description,
+		collections: img.collections,
 	};
 };
 

@@ -11,7 +11,7 @@
  */
 
 import { Image } from 'astro:assets';
-import type { Image as ImageType } from '../data/galleryData';
+import type { GalleryImage as ImageType } from '../data/galleryData';
 
 interface Props {
   images: ImageType[];
@@ -28,13 +28,19 @@ const { images } = Astro.props;
       class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4"
     >
       {images.map((image) => (
+
         <a
           href={image.src.src}
           class="photo-item glightbox inline-block mb-4 w-full transition-transform hover:scale-[1.02] hover:z-10 break-inside-avoid"
           data-gallery="gallery1"
           data-type="image"
-          data-glightbox={image.description ? `title: ${image.description}` : undefined}
+          data-glightbox={
+            image.title || image.description
+              ? `title: ${image.title}; description: ${image.description}`
+              : undefined
+          }
         >
+
           <!-- Optimised image output -->
           <Image
             src={image.src}

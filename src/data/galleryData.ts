@@ -17,6 +17,7 @@ import * as yaml from 'js-yaml';
  * Structure of the collections YAML file
  * @property {Collection[]} collections - Array of collections
  */
+
 export interface GalleryData {
 	collections: Collection[];
 	images: GalleryImage[];
@@ -27,6 +28,7 @@ export interface GalleryData {
  * @property {string} name - Name of the collection
  * @property {GalleryImage[]} getImages - Array of images in the collection
  */
+
 export interface Collection {
 	id: string;
 	name: string;
@@ -35,33 +37,20 @@ export interface Collection {
 /**
  * Represents a single image entry as defined in gallery.yaml.
  *
- * This is *content data only*:
- * - The image path is a string
- * - Metadata comes from YAML
- *
  * @property {string} path - Relative path to the image file
  * @property {string} alt - Alt text for accessibility and title
  * @property {string} description - Detailed description of the image
  * @property {string[]} collections - Array of collection IDs the image belongs to
  */
+
 export interface GalleryImage {
-	path: string;
-	meta: Meta;
-	exif?: ImageExif;
+  path: string;
+  title: string;
+  description: string;
+  collections: string[];
+  exif?: ImageExif;
 }
 
-/**
- * Represents the metadata of an image
- * @property {string} path - Relative path to the image file
- * @property {string} title - Title of the image
- * @property {string} description - Detailed description of the image
- * @property {string[]} collections - Array of collection IDs the image belongs to
- */
-export interface Meta {
-	title: string;
-	description: string;
-	collections: string[];
-}
 
 /**
  * Optional EXIF metadata for an image.
