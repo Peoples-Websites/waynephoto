@@ -34,11 +34,14 @@ const { images } = Astro.props;
           class="photo-item glightbox inline-block mb-4 w-full transition-transform hover:scale-[1.02] hover:z-10 break-inside-avoid"
           data-gallery="gallery1"
           data-type="image"
-          data-glightbox={
-            image.title || image.description
-              ? `title: ${image.title}; description: ${image.description}`
-              : undefined
-          }
+          data-title={image.title}
+          data-description={`
+            <div class="lightbox-panel">
+              <p>${image.description}</p>
+              ${image.date ? `<div> ${image.date}</div>` : ''}
+              ${image.location ? `<div> ${image.location}</div>` : ''}
+    </div>
+  `}
         >
 
           <!-- Optimised image output -->

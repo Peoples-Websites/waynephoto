@@ -16,6 +16,8 @@ import type { ImageMetadata } from 'astro';
 
 export interface Image {
   src: ImageMetadata;
+  date: string;
+  location: string;
   title: string;
   description: string;
   collections: string[];
@@ -60,25 +62,18 @@ const defaultGalleryPath = 'src/gallery/gallery.yaml';
 export const featuredCollectionId = 'featured';
 const builtInCollections = [featuredCollectionId];
 
-/**
- * Options for retrieving images from the gallery
- * @property {string} [galleryPath] - Path to the gallery YAML file
- * @property {string} [collection] - Collection name to filter images by
- * @property {string} [sortBy] - Property to sort images by (e.g., 'captureDate')
- * @property {'asc' | 'desc'} [order] - Sort order, either ascending or descending
- */
+// GetImagesOptions: options for retrieving images from the gallery
 interface GetImagesOptions {
-	galleryPath?: string;
-	collection?: string;
-	sortBy?: 'captureDate';
-	order?: 'asc' | 'desc';
+	galleryPath?: string;    // path to gallery.yaml
+	collection?: string;     // collection name to filter images by
+	sortBy?: 'captureDate';  // property to sort images by (e.g., 'captureDate')
+	order?: 'asc' | 'desc';  // sort order, either ascending or descending
 }
 
 /**
- * Retrieves processed images from a specified gallery path
+ * getImages: retrieves processed images from a specified gallery path
  * and optionally filters them by a collection name.
  *
- * This function:
  * 1. Loads gallery data from YAML
  * 2. Validates collections
  * 3. Filters by collection (if provided)
@@ -92,17 +87,21 @@ interface GetImagesOptions {
  * @throws {ImageStoreError} Throws an error if loading the gallery data fails.
  */
 export const getImages = async (options: GetImagesOptions = {}): Promise<Image[]> => {
+
 	const { galleryPath = defaultGalleryPath, collection } = options;
+
 	try {
 		let images = (await loadGalleryData(galleryPath)).images;
 		images = filterImagesByCollection(collection, images);
 		images = sortImages(images, options);
 		return processImages(images, galleryPath);
+
 	} catch (error) {
 		throw new ImageStoreError(
 			`Failed to load images from ${galleryPath}: ${getErrorMsgFrom(error)}`,
 		);
 	}
+
 };
 
 function getErrorMsgFrom(error: unknown) {

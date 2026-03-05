@@ -13,61 +13,31 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import * as yaml from 'js-yaml';
 
-/**
- * Structure of the collections YAML file
- * @property {Collection[]} collections - Array of collections
- */
 
+// GalleryData: the structure of gallery.yaml
 export interface GalleryData {
-	collections: Collection[];
-	images: GalleryImage[];
+  collections: Collection[];
+  images: GalleryImage[];
 }
 
-/**
- * Represents a collection of images
- * @property {string} name - Name of the collection
- * @property {GalleryImage[]} getImages - Array of images in the collection
- */
-
+// Collection: details of a named collection of images (e.g. Travel)
 export interface Collection {
 	id: string;
 	name: string;
 }
 
-/**
- * Represents a single image entry as defined in gallery.yaml.
- *
- * @property {string} path - Relative path to the image file
- * @property {string} alt - Alt text for accessibility and title
- * @property {string} description - Detailed description of the image
- * @property {string[]} collections - Array of collection IDs the image belongs to
- */
-
+// GalleryImage: a single image entry
 export interface GalleryImage {
-  path: string;
-  title: string;
-  description: string;
-  collections: string[];
-  exif?: ImageExif;
+  path: string;           // relative path to the image file
+  date: string;           // date photograph was taken in readable format, for display
+  location: string;       // location where photograph was taken, for display
+  title: string;          // title (also used as alt text)
+  description: string;    // photographer's comments about the image
+  collections: string[];  // an array of the collection IDs that the image belongs to
+  exif?: ImageExif;       // not implemented
 }
 
-
-/**
- * Optional EXIF metadata for an image.
- *
- * NOTE:
- * - EXIF data is not currently extracted automatically.
- * - These fields exist to support future enhancements
- *   (e.g. sorting or displaying camera settings).
- *
- * @property {number} [focalLength] - Focal length of the lens
- * @property {number} [iso] - ISO sensitivity
- * @property {number} [fNumber] - Aperture value
- * @property {number} [shutterSpeed] - Shutter speed
- * @property {Date} [captureDate] - Date and time of capture
- * @property {string} [model] - Camera model
- * @property {string} [lensModel] - Lens model
- */
+// ImageExif: optional EXIF metadata for an image
 export interface ImageExif {
 	focalLength?: number;
 	iso?: number;
@@ -78,11 +48,10 @@ export interface ImageExif {
 	lensModel?: string;
 }
 
+
 /**
- * Loads and parses a gallery YAML file from disk.
- *
- * (does not validate image paths or collections —
- * only returns the raw structured data)
+ * Loads and parses gallery.yaml from disk. Does not validate
+ * image paths or collections — only returns the raw structured data.
  */
 export const loadGallery = async (galleryPath: string): Promise<GalleryData> => {
 	const yamlPath = path.resolve(process.cwd(), galleryPath);
