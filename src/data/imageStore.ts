@@ -212,6 +212,8 @@ const createImageDataFor = (imagePath: string, img: GalleryImage): Image => {
 		src: imageModule.default,
 		title: img.title,
 		description: img.description,
+		date: img.date,
+		location: img.location,
 		collections: img.collections,
 	};
 };

@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
-import "../styles/themes.css";
+
 import Navbar from "../components/Navbar.astro";
 
 // Import GLightbox CSS locally from node_modules
 import 'glightbox/dist/css/glightbox.min.css';
 ---
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@ import 'glightbox/dist/css/glightbox.min.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <!-- Apply saved theme instantly -->
+    <!-- Apply saved theme straight away -->
     <script is:inline>
       const saved = localStorage.getItem("theme");
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
