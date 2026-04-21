@@ -12,6 +12,7 @@
 
 import { Image } from 'astro:assets';
 import type { Image as ImageType } from '../data/imageStore';
+import 'glightbox/dist/css/glightbox.css';
 
 interface Props {
   images: ImageType[];
@@ -70,9 +71,14 @@ const { images } = Astro.props;
   but in this project it caused the navigation buttons to disappear.
   The global (CDN) build is stable and fully renders the UI.
 -->
+
+<!--
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+-->
 
 <script>
+  import GLightbox from 'glightbox';
+
   // Initialise GLightbox once DOM is ready
   document.addEventListener('DOMContentLoaded', () => {
     GLightbox({
